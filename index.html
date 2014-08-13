@@ -1,4 +1,4 @@
-$def with (title, name)
+$def with (title, lat, lon)
 <html>
 <head>
 <title>$title</title>
@@ -10,8 +10,9 @@ $def with (title, name)
 </style>
 </head>
 <body>
-<p>I am  <b>$name</b>.</p>
-
+<div id="query">
+<p>Current location <b>$lat</b> & <b>$lon</b> .</p>
+</div>
 <div id="tags">Click the button below to locate your area
 </div>
 <br />
@@ -19,9 +20,6 @@ $def with (title, name)
 <p class="style1">
 (You need to share your location info but this is just this one time only (no storing) and please be patient - reload may take a few seconds..)
 </p>
-<input type="checkbox" name="track" id="track">
-<label for="track">Track my position</label>
-
 <table align="left" border="0" cellpadding="4" cellspacing="0" width="600">
 <tr>
 <td>
@@ -32,5 +30,6 @@ $def with (title, name)
 </table>
 <script src="static/OpenLayers.js"></script>
 <script src="static/geolocation.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </body>
 </html>
